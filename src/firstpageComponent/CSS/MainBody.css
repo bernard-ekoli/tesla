@@ -1,0 +1,236 @@
+#main>:nth-child(1) {
+    background-image: url(../../asset/Image/10022.jpeg);
+}
+
+#main>:nth-child(2) {
+    background-image: url(../../asset/Image/10021.png);
+}
+
+#main>:nth-child(3) {
+    background-image: url(../../asset/Image/10020.jpeg);
+}
+
+#main>:nth-child(4) {
+    background-image: url(../../asset/Image/10019.png);
+}
+
+#main>:nth-child(5) {
+    background-image: url(../../asset/Image/10018.jpeg);
+}
+
+#main>:nth-child(6) {
+    background-image: url(../../asset/Image/10017.jpg);
+}
+
+#main>:nth-child(7) {
+    background-image: url(../../asset/Image/10016.jpeg);
+}
+
+#main>:nth-child(8) {
+    background-image: url(../../asset/Image/10015.png);
+}
+
+#main>:nth-child(9) {
+    background-image: url(../../asset/Image/10014.jpeg);
+}
+
+@media (min-width: 500px) {
+    #main>:nth-child(1) {
+        background-image: url(../../asset/Image/10005.jpeg);
+    }
+
+    #main>:nth-child(2) {
+        background-image: url(../../asset/Image/10006.jpeg);
+    }
+
+    #main>:nth-child(3) {
+        background-image: url(../../asset/Image/10007.jpeg);
+    }
+
+    #main>:nth-child(4) {
+        background-image: url(../../asset/Image/10008.jpeg);
+    }
+
+    #main>:nth-child(5) {
+        background-image: url(../../asset/Image/10009.jpeg);
+    }
+
+    #main>:nth-child(6) {
+        background-image: url(../../asset/Image/10010.jpeg);
+    }
+
+    #main>:nth-child(7) {
+        background-image: url(../../asset/Image/10011.jpeg);
+    }
+
+    #main>:nth-child(8) {
+        background-image: url(../../asset/Image/10012.jpeg);
+    }
+
+    #main>:nth-child(9) {
+        background-image: url(../../asset/Image/10013.jpeg);
+    }
+}
+
+#mainBody {
+    display: flex;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+#mBFirst {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+#mBFirst>img {
+    width: 100%;
+    height: 100%;
+}
+
+#mBFirst>:nth-child(1) {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    font-size: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+#mBFirst>:nth-child(2) {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    width: 100%;
+    text-decoration: underline;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    box-sizing: border-box;
+}
+
+#mBFirst>:nth-child(3) {
+    font-size: 15px;
+    font-weight: 900;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#mBSecond {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#mBSecond>:nth-child(1),
+#mBSecond>:nth-child(2) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 700;
+    border-radius: 7px;
+    border: none;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+    #mBSecond {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    #mBSecond>:nth-child(1),
+    #mBSecond>:nth-child(2) {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+#mBSecond>:nth-child(1) {
+    background-color: rgb(73, 73, 255);
+    color: white;
+}
+
+#cyberTruck {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100vh;
+    background-position: center;
+    align-items: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#ctFirst {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    max-width: 500px;
+}
+
+#ctFirst>img {
+    width: 100%;
+    height: 100%;
+}
+
+#ctSecond {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 25px;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#ctSecond>button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 700;
+    border-radius: 7px;
+    border: none;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+    #ctSecond>button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+#special {
+    width: 100%;
+}
+
+@media (min-width: 500px) {
+    #special {
+        width: auto;
+    }
+}

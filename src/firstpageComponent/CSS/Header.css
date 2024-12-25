@@ -1,0 +1,761 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#Headers {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: grey;
+}
+
+#learnMore {
+    cursor: pointer;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    font-weight: 900;
+    font-size: 15px;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+#clickTLM {
+    padding-left: 10px;
+    text-decoration: underline;
+    color: grey;
+}
+
+#secondBanner {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-image: url(../../asset/Image/10024.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 70px;
+}
+
+@media (min-width: 500px) {
+    #secondBanner {
+        background-image: url(../../asset/Image/10024Big.jpeg);
+    }
+}
+
+#sBHEad {
+    display: flex;
+    flex-direction: row;
+}
+
+#teslaName {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#teslaName>svg {
+    margin-top: 8px;
+    width: 130px;
+    color: white;
+}
+
+#menu {
+    flex-grow: 1;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#menu>button {
+    padding: 8px 15px;
+    color: white;
+    font-weight: 800;
+    background-color: rgba(0, 0, 165, 0.123);
+    border: none;
+    border-radius: 5px;
+}
+
+#sBBody {
+    display: flex;
+    width: 100%;
+    padding-top: 50px;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    height: 100%;
+}
+
+#sBBFirst {
+    color: white;
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+#sBBSecond {
+    padding: 20px 15px 0;
+    box-sizing: border-box;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+.sbbsBut {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+@media (min-device-width: 360px) and (max-device-width: 767px) {
+    .sbbsBut {
+        padding: 12px 30px;
+    }
+}
+
+#sbFoot {
+    padding-bottom: 30px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#sbFoot>button {
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: none;
+    margin-right: 10px;
+}
+
+#sBFbut2 {
+    background-color: rgba(255, 255, 255, 0.445);
+}
+
+#Menu {
+    position: fixed;
+    background-color: white;
+    overflow-y: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    display: none;
+    flex-direction: column;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#cmClose {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 99;
+}
+
+#allMenu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.menu1 {
+    display: flex;
+    padding: 25px 0;
+    font-family: Tahoma, sans-serif;
+    font-weight: 900;
+    padding-left: 20px;
+}
+
+.menu1>div {
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.location {
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    gap: 12px;
+    padding-left: 20px;
+}
+
+#globe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    height: 17px;
+    width: 17px;
+    box-sizing: border-box;
+}
+
+#location2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#location2> :nth-child(1) {
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#location2> :nth-child(2) {
+    color: gray;
+}
+
+.location> :nth-child(3) {
+    flex-grow: 1;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+#Menu.toggle {
+    display: flex;
+}
+
+#disVehicle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 25px;
+    background-color: white;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#firstDV {
+    position: sticky;
+    top: 0;
+    padding: 32px 10px 15px;
+    box-sizing: border-box;
+    background-color: white;
+    height: 60px;
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    width: 100%;
+    justify-content: center;
+}
+
+#firstDV>div {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#firstDV> :nth-child(2) {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    width: 100%;
+}
+
+#firstDV> :nth-child(3) {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+#ssD {
+    display: flex;
+}
+
+#ssdI {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 200px;
+}
+
+#ssdI>img {
+    width: 100%;
+}
+
+#ssdDiv {
+    width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ssdDiv> :nth-child(1) {
+    padding-bottom: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+}
+
+#ssdDiv> :nth-child(2) {
+    display: flex;
+    gap: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    text-decoration: underline;
+    color: rgb(88, 88, 88);
+}
+
+#secondDV {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+#dVall {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+    width: 100%;
+}
+
+#dVall>div {
+    display: flex;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 50px;
+}
+
+#dVall> :last-child {
+    padding-bottom: 20px;
+}
+
+#disVehicle.vehDis {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#tesHid {
+    overflow: hidden;
+    display: none;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    position: absolute;
+    padding-top: 20px;
+    box-sizing: border-box;
+    height: 60px;
+    animation: slideInFromTop 1s ease-out forwards;
+}
+
+.tesHud {
+    transition: 2s;
+    opacity: 0;
+    display: none;
+}
+
+.tesRed {
+    transition: 2s;
+    opacity: 0;
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(75%);
+    }
+}
+
+#tesHidLogo {
+    flex-grow: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 50px;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: left;
+}
+
+#tesHidLogo>svg {
+    width: 100%;
+    max-width: 120px;
+}
+
+#tesHid {
+    position: fixed;
+    z-index: 999;
+}
+
+#tesHidLinks {
+    flex-grow: 1;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    gap: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tesHidLinks>span {
+    cursor: pointer;
+}
+
+#tesHidImg {
+    flex-grow: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 50px;
+    display: none;
+    align-items: center;
+    justify-content: right;
+    padding-right: 50px;
+    gap: 10px;
+}
+
+@media (min-width: 1200px) {
+    #tesHidLinks {
+        display: flex;
+    }
+
+    #tesHidImg {
+        display: flex;
+    }
+
+    #disMenu {
+        display: none;
+    }
+}
+
+#tesHidImg>span {
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+#tesHidImg>span>svg {
+    cursor: pointer;
+    width: 100%;
+    max-width: 25px;
+}
+
+#disMenu {
+    flex-grow: 1;
+    text-align: right;
+    padding-right: 20px;
+}
+
+#disMenu>button {
+    padding: 8px 15px;
+    color: black;
+    font-weight: 800;
+    background-color: rgba(0, 0, 165, 0.055);
+    border: none;
+    border-radius: 5px;
+}
+
+/* Keyframes for the bouncing effect */
+@keyframes slideInBounce {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    80% {
+        transform: translateX(10%);
+        /* Overshoot the target */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Settle at the target */
+    }
+}
+
+/* Apply the animation to the element */
+#visitPort.bouncy-slide {
+    animation: slideInBounce 1s ease-in-out forwards;
+}
+
+@keyframes slideOutBounce {
+    0% {
+        transform: translateX(0);
+        /* Start at the final position of slideInBounce */
+    }
+
+    20% {
+        transform: translateX(-10%);
+        /* Slight push back before sliding out */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Completely out of the screen */
+    }
+}
+
+/* Apply the animation to the element */
+#visitPort.bouncy-slide-out {
+    animation: slideOutBounce 1s ease-in-out forwards;
+}
+
+#sVisitPort {
+    cursor: pointer;
+    position: fixed;
+    top: 100px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 1px 1px 10px black;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 90px;
+    font-weight: 900;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    z-index: 999;
+}
+
+#visitPort {
+    top: 100px;
+    transform: translateX(-100%);
+    position: fixed;
+    width: 100%;
+    max-width: 350px;
+    overflow: hidden;
+    height: 100px;
+    display: flex;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.733);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    box-shadow: 5px 5px 20px black;
+    z-index: 9999;
+}
+
+#imgVp {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgVp>img {
+    width: 100%;
+}
+
+#vpSec {
+    width: 100%;
+}
+
+#visit {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#linkTo {
+    position: relative;
+    height: 100%;
+    text-decoration: none;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 5px;
+    cursor: default;
+    color: black;
+}
+
+#parClose {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+#linkTo>button {
+    cursor: pointer;
+    border: none;
+    background-color: rgba(0, 0, 255, 0.699);
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 15px black;
+}
+
+#close {
+    z-index: 9999;
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    font-weight: 900;
+    box-sizing: border-box;
+    padding: 10px;
+    color: red;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#vehiclesBar {
+    position: fixed;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+    background-color: white;
+    overflow: hidden;
+    height: 90vh;
+    padding-top: 200px;
+    box-shadow: 3px 3px 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+#vehiclesBar.togVehBar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#vB1 {
+    padding-left: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: left;
+}
+
+#v1 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 230px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    gap: 10px;
+}
+
+#v1Img {
+    width: 100%;
+    overflow: hidden;
+}
+
+#v1Img>img {
+    width: 100%;
+}
+
+#v1>span {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#v1text {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: underline;
+    color: gray;
+    font-size: 12px;
+}
+
+#vB2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    width: 60%;
+    max-width: 200px;
+    color: rgb(43, 43, 43);
+    padding-left: 50px;
+    border-left: 1px solid rgba(128, 128, 128, 0.507);
+}
+
+@media (min-width: 2000px) {
+    #vehiclesBar {
+        height: 55vh;
+    }
+}

@@ -1,0 +1,1093 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+#orderIndex {
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    z-index: 9999;
+}
+
+#carsViews {
+    position: sticky;
+    top: 0;
+    z-index: 9999999;
+    background-color: white;
+}
+
+#carsViews>span {
+    position: absolute;
+    display: none;
+    top: 20px;
+    width: 100%;
+    padding-left: 20px;
+    font-weight: 900;
+    color: red;
+    z-index: 999999999;
+}
+
+.moveImage {
+    cursor: pointer;
+}
+
+#apr {
+    display: flex;
+    background-color: rgb(235, 231, 231);
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#apr>div {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+#orIndex {
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: white;
+    z-index: 9999;
+    overflow: auto;
+}
+
+#apr>span {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 30px;
+}
+
+#teslaLogo {
+    display: flex;
+    z-index: 99999;
+    flex-direction: row;
+}
+
+#tesName {
+    width: 100%;
+    padding-left: 20px;
+}
+
+#tesName>svg {
+    width: 126px;
+    height: 100%;
+}
+
+#loc {
+    overflow: hidden;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+#locImg {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    padding-right: 10px;
+    height: 20px;
+}
+
+#locImg>img {
+    width: 100%;
+    height: 100%;
+}
+
+#loc>span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#carView {
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: white;
+    width: 100%;
+}
+
+#carImages {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+#carImages>img {
+    width: 100%;
+    transition: opacity 2s;
+    opacity: 1;
+}
+
+#carImages>img.fading {
+    opacity: 0;
+}
+
+#carView>:first-child {
+    position: absolute;
+    top: 45%;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    opacity: 1;
+}
+
+#carView>:nth-child(3) {
+    position: absolute;
+    top: 45%;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    opacity: 1;
+}
+
+#carModel {
+    display: flex;
+    flex-direction: column;
+}
+
+#carName {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+}
+
+#carSpeed {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#carSpeed>span {
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#carSpeed>span>:nth-child(2) {
+    color: rgb(63, 63, 63);
+}
+
+#classification {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+#classificationHead {
+    width: 100%;
+    display: flex;
+}
+
+#cHDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+}
+
+#cHDiv>span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(63, 63, 63);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+#cHDiv>:nth-child(1) {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+#classificationTypes {
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+#CTChild {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: row;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+}
+
+#CTChild>:nth-child(1) {
+    width: 100%;
+    padding-left: 20px;
+}
+
+#CTChild>:nth-child(2) {
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+#classificationTypes>:nth-child(2) {
+    border: 1px solid gray;
+    color: gray;
+}
+
+#classificationTypes>:nth-child(3) {
+    border: 1px solid gray;
+    color: gray;
+}
+
+#classification>span {
+    text-align: center;
+    color: gray;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#classification>span>b {
+    color: black;
+}
+
+#classification>:nth-child(4) {
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#classification>:nth-child(4)>button,
+#buttonParent>button {
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 17px;
+    padding-left: 17px;
+    border: none;
+    background-color: rgba(190, 190, 190, 0.301);
+    font-weight: 900;
+    color: rgb(68, 68, 68);
+}
+
+#carColor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 70px;
+}
+
+#ccHead {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ccHead>:nth-child(1) {
+    color: rgb(85, 85, 85);
+}
+
+#ccHead>:nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    font-weight: 900;
+}
+
+#carColorImage {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 2px;
+}
+
+#carColorImage>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+}
+
+#carColorImage>:nth-child(1) {
+    border: 1px solid black;
+}
+
+#carColorImage>div>img {
+    width: 100%;
+}
+
+#carWheels {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#cWHead {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 70px;
+    align-items: center;
+}
+
+#cWHead>:nth-child(1) {
+    color: rgb(82, 82, 82);
+}
+
+#cWHead>:nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+#cWImage {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 8px;
+}
+
+#cWImage>div {
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+#cWImage>div>img {
+    width: 100%;
+    height: 100%;
+}
+
+#cWImage>:nth-child(1) {
+    border: 1px solid black;
+}
+
+#carWheels>span {
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+    padding-left: 70px;
+    color: gray;
+    padding-right: 70px;
+    box-sizing: border-box;
+}
+
+#towing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 70px;
+}
+
+#towing>:nth-child(1) {
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+#towing>:nth-child(2) {
+    color: gray;
+    width: 100%;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+#towingInput,
+#selfDriveInput {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+#towingInput>div,
+#selfDriveInput>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    padding-left: 10px;
+    border: 1px solid gray;
+    height: 50px;
+}
+
+#towingInput>div>:nth-child(3),
+#selfDriveInput>div>:nth-child(3) {
+    width: 100%;
+    color: gray;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#towingInput>div>:nth-child(2),
+#selfDriveInput>div>:nth-child(2) {
+    width: 100%;
+    padding-left: 5px;
+    color: gray;
+}
+
+#interior {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+#interiorHead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#interiorHead>:nth-child(1) {
+    color: gray;
+}
+
+#interiorHead>:nth-child(2) {
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#interiorColor {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#interiorColor>:nth-child(1) {
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#interiorColor>:nth-child(1),
+#interiorColor>:nth-child(2) {
+    overflow: hidden;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+#interiorColor>:nth-child(1)>img,
+#interiorColor>:nth-child(2)>img {
+    width: 100%;
+}
+
+#interior>span {
+    width: 100%;
+    padding-top: 15px;
+    text-align: center;
+    font-weight: 800;
+}
+
+#buttonParent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+#selfDriving {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+#selfDriveHead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#selfDriveHead>:nth-child(1) {
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: center;
+}
+
+#selfDriveHead>:nth-child(2) {
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+}
+
+#sdVideo {
+    width: 100%;
+    padding-top: 30px;
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#watchVideo {
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+#vidImg {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+}
+
+#vidImg>img {
+    width: 100%;
+}
+
+#vidText {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: center;
+}
+
+#vidText>:nth-child(1) {
+    font-weight: 900;
+    padding-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#vidText>:nth-child(2) {
+    color: gray;
+    font-size: 13px;
+}
+
+#watchVidText {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#watchVidText>span {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    color: gray;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 20px;
+}
+
+#charging {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+#chargingHead {
+    display: flex;
+    flex-direction: column;
+}
+
+#chargingHead>:nth-child(1) {
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#chargingHead>:nth-child(2) {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+}
+
+#chargeImage {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#ciOne {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    width: 130px;
+    height: 210px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#inp {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#cBIOImage {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+#cBIOImage>:nth-child(1) {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cBIOImage>:nth-child(1)>img {
+    width: 100%;
+    height: 100%;
+}
+
+#cBIOImage>:nth-child(2) {
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifs;
+    font-size: 12px;
+}
+
+#checkText {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+#checkText>:nth-child(1) {
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#checkText>:nth-child(2) {
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+}
+
+#chargBut,
+#accessories>:nth-child(3) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#chargBut>button,
+#accessories>:nth-child(3)>button {
+    padding-left: 30px;
+    border: none;
+    box-sizing: border-box;
+    padding-right: 30px;
+    padding-top: 8px;
+    font-weight: 900;
+    font-size: 12px;
+    color: rgb(63, 63, 63);
+    padding-bottom: 8px;
+}
+
+#accessories {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+#accessories>span {
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#childAcce {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    gap: 15px;
+}
+
+#childAcce>div {
+    width: 100%;
+    border: 1px solid gray;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#childAcce>div>:nth-child(1) {
+    padding-left: 5px;
+}
+
+#childAcce>div>:nth-child(2) {
+    width: 100%;
+    padding-left: 5px;
+    color: gray;
+    font-weight: 900;
+}
+
+#childAcce>div>:nth-child(3) {
+    padding-right: 10px;
+    color: gray;
+}
+
+#deliveryZip {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 80px;
+}
+
+#deliveryZip>span {
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#deliveryZip>div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 10px;
+}
+
+#deliveryZip>div>input {
+    width: 50%;
+    height: 40px;
+    border: none;
+    background-color: rgba(223, 223, 223, 0.664);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    font-weight: 900;
+    padding-left: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#deliveryZip>div>button {
+    width: 50%;
+    height: 40px;
+    border: none;
+    background-color: rgb(98, 98, 253);
+    color: white;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+#payment {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+}
+
+#payment>button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 100%;
+}
+
+@media (min-width: 556px) {
+    #orderIndex {
+        flex-direction: row;
+        flex-grow: 1;
+        width: 100%;
+        overflow: scroll;
+        position: relative;
+    }
+
+    #carModel {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #carsViews {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+    }
+
+    #carView {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    #carImages {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #carImages>img {
+        width: 100%;
+
+    }
+}
+
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#imgFull {
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: white;
+    z-index: 999999999;
+}
+
+#imgFull>span {
+    width: 100%;
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 20px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+#imgFull>div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+#imgFull>div>img {
+    width: 100%;
+}
+
+
+#left,
+#right {
+    cursor: pointer;
+    position: absolute;
+    width: 100px;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+#left {
+    left: 50px;
+}
+
+#right {
+    right: 30px;
+}
+
+#fullCarImg {
+    position: absolute;
+    display: none;
+    width: 25px;
+    top: 20px;
+    right: 20px;
+    z-index: 999999999;
+}
+
+@media (min-width: 556px) and (max-width: 1300px) {
+    #fullCarImg {
+        display: block;
+    }
+}
+
+#imgFull.chekers {
+    display: flex;
+    animation: slideFromTop 2s ease forwards;
+}
+
+@keyframes slideOutTop {
+    from {
+        transform: translateY(0);
+        /* In view */
+    }
+
+    to {
+        transform: translateY(-100%);
+        /* Slide out of view */
+    }
+}
+
+#imgFull.slideOut {
+    animation: slideOutTop 2s ease forwards;
+    display: flex;
+    /* Ensure it's visible during the animation */
+}
