@@ -21,6 +21,7 @@ const Firstpage = () => {
   const [todVeh, setTogVeh] = useState(false);
 
   useEffect(() => {
+    let vehBar = document.getElementById('vehiclesBar');
     let visitPort = document.getElementById('visitPort');
     let par = document.getElementById('par');
     let close = document.getElementById('close')
@@ -55,11 +56,16 @@ const Firstpage = () => {
   const scrollable = (e) => {
     const scrollTop = e.target.scrollTop;
     let headDIs = document.getElementById("tesHid");
-
+    let vehBar = document.getElementById('vehiclesBar');
     if (scrollTop > formScroll.current) {
       // Scrolling down
       topScroll.current = scrollTop;
       headDIs.style.display = "none";
+      vehBar.classList.remove('togVehBar');
+      setTimeout(() => {
+        vehBar.style.display = 'none';
+      }, 300);
+      console.log('par CLicked')
     } else if (scrollTop < formScroll.current) {
       // Scrolling up
       headDIs.style.display = "flex";
@@ -70,6 +76,11 @@ const Firstpage = () => {
     if (scrollTop === 0) {
       headDIs.style.opacity = "0";
       headDIs.style.transition = "2s";
+      vehBar.classList.remove('togVehBar');
+      setTimeout(() => {
+        vehBar.style.display = 'none';
+      }, 300);
+      console.log('par CLicked')
     }
 
     // Update `formScroll` and state
