@@ -5,14 +5,33 @@ import Footer from './firstpageComponent/Footer'
 import './firstpageComponent/CSS/Header.css'
 import { useEffect, useState, useRef } from 'react'
 import { imageVeh } from './firstpageComponent/Header'
-let showVeh1 = imageVeh[0]
-let showVeh2 = imageVeh[1]
-let showVeh3 = imageVeh[2]
-let showVeh4 = imageVeh[3]
-let cybertruck = imageVeh[4]
-let helpMeChoose = imageVeh[5]
 import ben from './asset/Image/ben.webp'
 import sadBen from './asset/Image/sadBen.webp'
+const SdImg = [{
+  name: 'Model S',
+  img: imageVeh[0],
+},
+{
+  name: 'Model 3',
+  img: imageVeh[1]
+},
+{
+  name: 'Model X',
+  img: imageVeh[2]
+},
+{
+  name: 'Model Y',
+  img: imageVeh[3]
+},
+{
+  name: 'Cybertruck',
+  img: imageVeh[4]
+},
+{
+  name: 'Help Me Choose',
+  img: imageVeh[5]
+}
+]
 const Firstpage = () => {
   const [scrolling, setScrolling] = useState(null);
   let formScroll = useRef(0); // Holds previous scroll value
@@ -21,7 +40,6 @@ const Firstpage = () => {
   const [todVeh, setTogVeh] = useState(false);
 
   useEffect(() => {
-    let vehBar = document.getElementById('vehiclesBar');
     let visitPort = document.getElementById('visitPort');
     let par = document.getElementById('par');
     let close = document.getElementById('close')
@@ -104,21 +122,22 @@ const Firstpage = () => {
     setTogMenu(false);
     setTogVeh(false);
   }
-  function togVehBar(e) {
+  function togVehBar() {
     let vehBar = document.getElementById('vehiclesBar');
+    let sBHEad = document.getElementById('sBHEad');
 
     if (vehBar.style.display === 'none' || !vehBar.style.display) {
-      // Make the element visible and trigger the animation
-      vehBar.style.display = 'flex'; // Show the element
+      sBHEad.style.color = 'black'
+      vehBar.style.display = 'flex';
       requestAnimationFrame(() => {
         vehBar.classList.add('togVehBar');
       });
     } else {
-      // Trigger the hide animation
+      sBHEad.style.color = 'white'
       vehBar.classList.remove('togVehBar');
       setTimeout(() => {
         vehBar.style.display = 'none';
-      }, 300); // Match the CSS transition duration
+      }, 300);
     }
   }
 
@@ -164,15 +183,17 @@ const Firstpage = () => {
       </div>
       <div id="vehiclesBar">
         <div id="vB1">
-          <div id="v1">
-            <div id="v1Img"><img src={imageVeh[0]} alt="Image 1" /></div>
-            <span>Model S</span>
-            <div id="v1text">
-              <span>Learn</span>
-              <span>Order</span>
-            </div>
-          </div>
-          <div id="v1">
+          {SdImg.map((v1, index) => {
+              <div id="v1" key={index}>
+                <div id="v1Img"><img src={v1.img} alt="Image 1" /></div>
+                <span>{v1.name}</span>
+                <div id="v1text">
+                  <span>Learn</span>
+                  <span>Order</span>
+                </div>
+              </div>
+          })}
+          {/*       <div id="v1">
             <div id="v1Img"><img src={imageVeh[1]} alt="Image 1" /></div>
             <span>Model 3</span>
             <div id="v1text">
@@ -210,7 +231,7 @@ const Firstpage = () => {
             <div id="v1text">
               <span>Get Started</span>
             </div>
-          </div>
+          </div> */}
         </div>
         <div id="vB2">
           <span>Inventory</span>
@@ -282,78 +303,24 @@ const Firstpage = () => {
           <span onClick={close}>x</span>
         </div>
         <div id="secondDV">
-          <div id='ssD'>
-            <div id="ssdI">
-              <img src={showVeh1} alt="" />
-            </div>
-            <div id='ssdDiv'>
-              <span>Model S</span>
-              <div>
-                <span>Learn</span>
-                <span>Order</span>
+          {SdImg.map((ssD, index) => {
+            return (
+              <div key={index}>
+                <div id="ssD">
+                  <div id="ssdI">
+                    <img src={ssD.img} alt="Image" />
+                  </div>
+                  <div id='ssdDiv'>
+                    <span>{ssD.name}</span>
+                    <div>
+                      <span>Learn</span>
+                      <span>Order</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div id='ssD'>
-            <div id="ssdI">
-              <img src={showVeh2} alt="" />
-            </div>
-            <div id='ssdDiv'>
-              <span>Model 5</span>
-              <div>
-                <span>Learn</span>
-                <span>Order</span>
-              </div>
-            </div>
-          </div>
-          <div id='ssD'>
-            <div id="ssdI">
-              <img src={showVeh3} alt="" />
-            </div>
-            <div id='ssdDiv'>
-              <span>Model X</span>
-              <div>
-                <span>Learn</span>
-                <span>Order</span>
-              </div>
-            </div>
-          </div>
-          <div id='ssD'>
-            <div id="ssdI">
-              <img src={showVeh4} alt="" />
-            </div>
-            <div id='ssdDiv'>
-              <span>Model 4</span>
-              <div>
-                <span>Learn</span>
-                <span>Order</span>
-              </div>
-            </div>
-          </div>
-          <div id='ssD'>
-            <div id="ssdI">
-              <img src={cybertruck} alt="" />
-            </div>
-            <div id='ssdDiv'>
-              <span>Cybertruck</span>
-              <div>
-                <span>Learn</span>
-                <span>Order</span>
-              </div>
-            </div>
-          </div>
-          <div id='ssD'>
-            <div id="ssdI">
-              <img src={helpMeChoose} alt="" />
-            </div>
-            <div id='ssdDiv'>
-              <span>Help Me Choose</span>
-              <div>
-                <span>Learn</span>
-                <span>Order</span>
-              </div>
-            </div>
-          </div>
+            )
+          })}
         </div>
         <div id="dVall">
           <hr />
@@ -387,7 +354,7 @@ const Firstpage = () => {
           </div>
         </div>
       </div>
-      <Header />
+      <Header togVehBar={togVehBar} />
       <MainBody />
       <Footer />
     </div >
