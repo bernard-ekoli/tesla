@@ -184,54 +184,15 @@ const Firstpage = () => {
       <div id="vehiclesBar">
         <div id="vB1">
           {SdImg.map((v1, index) => {
-              <div id="v1" key={index}>
-                <div id="v1Img"><img src={v1.img} alt="Image 1" /></div>
-                <span>{v1.name}</span>
-                <div id="v1text">
-                  <span>Learn</span>
-                  <span>Order</span>
-                </div>
+            <div id="v1" key={index}>
+              <div id="v1Img"><img src={v1.img} alt="Image 1" /></div>
+              <span>{v1.name}</span>
+              <div id="v1text">
+                <span>Learn</span>
+                <span>Order</span>
               </div>
+            </div>
           })}
-          {/*       <div id="v1">
-            <div id="v1Img"><img src={imageVeh[1]} alt="Image 1" /></div>
-            <span>Model 3</span>
-            <div id="v1text">
-              <span>Learn</span>
-              <span>Order</span>
-            </div>
-          </div>
-          <div id="v1">
-            <div id="v1Img"><img src={imageVeh[2]} alt="Image 1" /></div>
-            <span>Model X</span>
-            <div id="v1text">
-              <span>Learn</span>
-              <span>Order</span>
-            </div>
-          </div>
-          <div id="v1">
-            <div id="v1Img"><img src={imageVeh[3]} alt="Image 1" /></div>
-            <span>Model Y</span>
-            <div id="v1text">
-              <span>Learn</span>
-              <span>Order</span>
-            </div>
-          </div>
-          <div id="v1">
-            <div id="v1Img"><img src={imageVeh[4]} alt="Image 1" /></div>
-            <span>Cybertruck</span>
-            <div id="v1text">
-              <span>Learn</span>
-              <span>Order</span>
-            </div>
-          </div>
-          <div id="v1">
-            <div id="v1Img"><img src={imageVeh[5]} alt="Image 1" /></div>
-            <span>Help Me Choose</span>
-            <div id="v1text">
-              <span>Get Started</span>
-            </div>
-          </div> */}
         </div>
         <div id="vB2">
           <span>Inventory</span>
@@ -347,7 +308,7 @@ const Firstpage = () => {
             <span>Hi, I’m Bernard. Do you like my project? Why not explore my portfolio below?</span>
             <div id="parClose">
               <div id="close">X</div>
-              <a id='linkTo' href="">
+              <a id='linkTo' href="https://www.bernardekoli.xyz" target='_blank' rel="noreferrer">
                 <button>Visit Portfolio</button>
               </a>
             </div>
