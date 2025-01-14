@@ -679,7 +679,7 @@ button {
 
 #vehiclesBar {
     position: fixed;
-    display: none;
+    display: flex;
     align-items: flex-start;
     justify-content: center;
     top: 0px;

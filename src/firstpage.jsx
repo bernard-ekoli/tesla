@@ -183,16 +183,18 @@ const Firstpage = () => {
       </div>
       <div id="vehiclesBar">
         <div id="vB1">
-          {SdImg.map((v1, index) => {
+          {SdImg.map((v1, index) => (
             <div id="v1" key={index}>
-              <div id="v1Img"><img src={v1.img} alt="Image 1" /></div>
+              <div id="v1Img">
+                <img src={v1.img} alt="Image 1" />
+              </div>
               <span>{v1.name}</span>
               <div id="v1text">
                 <span>Learn</span>
                 <span>Order</span>
               </div>
             </div>
-          })}
+          ))}
         </div>
         <div id="vB2">
           <span>Inventory</span>
@@ -207,6 +209,7 @@ const Firstpage = () => {
           <span>Federal Tax Credit</span>
         </div>
       </div>
+
       <div id="Menu" className={togMenu ? 'toggle' : ''}>
         <div id="cmClose" onClick={toggleMenu}>x</div>
         <div id="allMenu">
